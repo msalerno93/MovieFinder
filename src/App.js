@@ -2,14 +2,12 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import MovieCard from './MovieCard';
 
-
 const API_URL = 'https://www.omdbapi.com?apikey=8a58b512'
 
 function App() {
 
   const [movies, setMovies] = useState([])
   const [search, setSearch] = useState('')
-
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
